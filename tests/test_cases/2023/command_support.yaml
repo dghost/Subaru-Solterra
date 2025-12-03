@@ -179,6 +179,3 @@ supported_commands_by_ecu:
   - 0142:VPWR
   - 014D:MIL_TIME
   - 014E:CLR_TIME
-unsupported_commands_by_ecu:
-  "747":
-  - 747.74F.220103|fc=1:SUB_EV_ODO
