@@ -163,6 +163,10 @@
 { "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "1F5B"}, "freq": 1,
   "signals": [
     {"id": "SUB_EV_HVBAT_SOC_BMS", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "HV battery charge", "suggestedMetric": "stateOfCharge"}
+  ]},
+{ "hdr": "7A2", "rax": "7AA", "fcm1": true, "cmd": {"22": "10A1"}, "freq": 1,
+  "signals": [
+    {"id": "SUBARU_MAF_VOLTAGE", "path": "Engine", "fmt": { "len": 8, "max": 5, "unit": "volts" }, "name": "Mass Air Flow (MAF) sensor voltage"}
   ]}
 ],
 "signalGroups": [
