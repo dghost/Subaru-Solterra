@@ -153,8 +153,8 @@
   ]},
 { "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "106C"}, "freq": 5,
   "signals": [
-    {"id": "SUB_EV_HVBAT_SOC_TRIP_MAX", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "div": 2, "unit": "percent" }, "name": "HV battery charge (trip max)"},
-    {"id": "SUB_EV_HVBAT_SOC_TRIP_MIN", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "div": 2, "unit": "percent" }, "name": "HV battery charge (trip min)"}
+    {"id": "SUB_EV_HVBAT_SOC_TRIP_MAX", "path": "Battery.Trip", "fmt": {"bix": 8,  "len": 8, "max": 100, "div": 2, "unit": "percent" }, "name": "HV battery charge (trip max)"},
+    {"id": "SUB_EV_HVBAT_SOC_TRIP_MIN", "path": "Battery.Trip", "fmt": {"bix": 16, "len": 8, "max": 100, "div": 2, "unit": "percent" }, "name": "HV battery charge (trip min)"}
   ]},
 { "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "1F0D"}, "freq": 0.25,
   "signals": [
