@@ -163,6 +163,46 @@
 { "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "1F5B"}, "freq": 1,
   "signals": [
     {"id": "SUB_EV_HVBAT_SOC_BMS", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "HV battery charge", "suggestedMetric": "stateOfCharge"}
+  ]},
+{ "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "1CCD"}, "freq": 1,
+  "signals": [
+    {"id": "SUB_EV_HVBAT_PACK_VOLTAGE", "path": "Battery", "fmt": { "len": 16, "max": 500, "div": 10, "unit": "volts" }, "name": "HV battery pack voltage"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "1002"}, "freq": 1,
+  "signals": [
+    {"id": "SUB_EV_HVBAT_SOC_RAW", "path": "Battery.BMS", "fmt": { "len": 16, "max": 100, "div": 128, "unit": "percent" }, "name": "HV battery state of charge"}
+  ]},
+{ "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "1696"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_TRACTION_POWER", "path": "Powertrain", "fmt": { "len": 16, "max": 200, "add": -32768, "div": 100, "unit": "kilowatts" }, "name": "Traction power", "suggestedMetric": "power"}
+  ]},
+{ "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "106E"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_REGEN_LEVEL", "path": "Powertrain", "fmt": { "len": 8, "max": 10 }, "name": "Regenerative braking level"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1024"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_ACCEL_PEDAL", "path": "Pedals", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 254, "unit": "percent" }, "name": "Accelerator pedal position", "suggestedMetric": "acceleratorPedalPosition"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1012"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_WHEEL_SPEED_1", "path": "Movement.Wheels", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Wheel speed 1"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1023"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_WHEEL_SPEED_2", "path": "Movement.Wheels", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Wheel speed 2"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1042"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_WHEEL_SPEED_3", "path": "Movement.Wheels", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Wheel speed 3"}
+  ]},
+{ "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1F46"}, "freq": 0.1,
+  "signals": [
+    {"id": "SUB_EV_AMBIENT_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Ambient temperature", "suggestedMetric": "ambientAirTemperature"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1038"}, "freq": 0.1,
+  "signals": [
+    {"id": "SUB_EV_CABIN_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Cabin temperature", "suggestedMetric": "cabinTemperature"}
   ]}
 ],
 "signalGroups": [
