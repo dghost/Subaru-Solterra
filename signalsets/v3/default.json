@@ -174,15 +174,15 @@
   ]},
 { "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "1696"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_TRACTION_POWER", "path": "Powertrain", "fmt": { "len": 16, "sign": true, "max": 200, "div": 100, "unit": "kilowatts" }, "name": "Traction power"}
+    {"id": "SUB_EV_TRACTION_POWER", "path": "Drivetrain", "fmt": { "len": 16, "max": 200, "min": -200, "add": -327.68, "div": 100, "unit": "kilowatts" }, "name": "Traction power"}
   ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "106E"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_REGEN_LEVEL", "path": "Powertrain", "fmt": { "len": 8, "max": 10 }, "name": "Regenerative braking level"}
+    {"id": "SUB_EV_UNKNOWN_106E", "path": "Drivetrain", "fmt": { "len": 8, "max": 100, "unit": "unknown" }, "name": "Unknown 106E byte 0"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1024"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_ACCEL_PEDAL", "path": "Pedals", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 254, "unit": "percent" }, "name": "Accelerator pedal position", "suggestedMetric": "throttlePosition"}
+    {"id": "SUB_EV_ACCEL_PEDAL", "path": "Control", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Accelerator pedal position", "suggestedMetric": "throttlePosition"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1012"}, "freq": 4,
   "signals": [
@@ -203,6 +203,42 @@
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1038"}, "freq": 0.1,
   "signals": [
     {"id": "SUB_EV_CABIN_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Cabin temperature"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "10A5"}, "freq": 0.2,
+  "signals": [
+    {"id": "SUB_EV_HVBAT_TEMP_A1", "path": "Battery.Temperature", "fmt": {           "len": 8, "min": -40, "max": 80, "add": -40, "unit": "celsius" }, "name": "HV battery temperature A1"},
+    {"id": "SUB_EV_HVBAT_TEMP_A2", "path": "Battery.Temperature", "fmt": {"bix": 8,  "len": 8, "min": -40, "max": 80, "add": -40, "unit": "celsius" }, "name": "HV battery temperature A2"},
+    {"id": "SUB_EV_HVBAT_TEMP_A3", "path": "Battery.Temperature", "fmt": {"bix": 16, "len": 8, "min": -40, "max": 80, "add": -40, "unit": "celsius" }, "name": "HV battery temperature A3"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "10A6"}, "freq": 0.2,
+  "signals": [
+    {"id": "SUB_EV_HVBAT_TEMP_B1", "path": "Battery.Temperature", "fmt": {           "len": 8, "min": -40, "max": 80, "add": -40, "unit": "celsius" }, "name": "HV battery temperature B1"},
+    {"id": "SUB_EV_HVBAT_TEMP_B2", "path": "Battery.Temperature", "fmt": {"bix": 8,  "len": 8, "min": -40, "max": 80, "add": -40, "unit": "celsius" }, "name": "HV battery temperature B2"},
+    {"id": "SUB_EV_HVBAT_TEMP_B3", "path": "Battery.Temperature", "fmt": {"bix": 16, "len": 8, "min": -40, "max": 80, "add": -40, "unit": "celsius" }, "name": "HV battery temperature B3"}
+  ]},
+{ "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1807"}, "freq": 1,
+  "signals": [
+    {"id": "SUB_EV_ESTIMATED_RANGE", "path": "Battery", "fmt": { "len": 16, "max": 500, "div": 100, "unit": "kilometers" }, "name": "Estimated range", "suggestedMetric": "electricRange"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "10A2"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_STEERING_ANGLE", "path": "Suspension", "fmt": { "len": 16, "max": 900, "min": -900, "sign": true, "div": 10, "unit": "degrees" }, "name": "Steering angle"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1081"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_YAW_RATE", "path": "Movement", "fmt": { "len": 16, "max": 100, "min": -100, "sign": true, "div": 100, "unit": "scalar" }, "name": "Yaw rate"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1082"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_LATERAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1084"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_LONGITUDINAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1025"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_BRAKE_PEDAL", "path": "Control", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Brake pedal position"}
   ]}
 ],
 "signalGroups": [
