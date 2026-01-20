@@ -174,7 +174,7 @@
   ]},
 { "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "1696"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_TRACTION_POWER", "path": "Powertrain", "fmt": { "len": 16, "max": 200, "add": -32768, "div": 100, "unit": "kilowatts" }, "name": "Traction power", "suggestedMetric": "power"}
+    {"id": "SUB_EV_TRACTION_POWER", "path": "Powertrain", "fmt": { "len": 16, "sign": true, "max": 200, "div": 100, "unit": "kilowatts" }, "name": "Traction power"}
   ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "106E"}, "freq": 4,
   "signals": [
@@ -182,7 +182,7 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1024"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_ACCEL_PEDAL", "path": "Pedals", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 254, "unit": "percent" }, "name": "Accelerator pedal position", "suggestedMetric": "acceleratorPedalPosition"}
+    {"id": "SUB_EV_ACCEL_PEDAL", "path": "Pedals", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 254, "unit": "percent" }, "name": "Accelerator pedal position", "suggestedMetric": "throttlePosition"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1012"}, "freq": 4,
   "signals": [
@@ -198,11 +198,11 @@
   ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1F46"}, "freq": 0.1,
   "signals": [
-    {"id": "SUB_EV_AMBIENT_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Ambient temperature", "suggestedMetric": "ambientAirTemperature"}
+    {"id": "SUB_EV_AMBIENT_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Ambient temperature"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1038"}, "freq": 0.1,
   "signals": [
-    {"id": "SUB_EV_CABIN_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Cabin temperature", "suggestedMetric": "cabinTemperature"}
+    {"id": "SUB_EV_CABIN_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Cabin temperature"}
   ]}
 ],
 "signalGroups": [
