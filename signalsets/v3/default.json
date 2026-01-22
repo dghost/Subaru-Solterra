@@ -176,13 +176,17 @@
   "signals": [
     {"id": "SUB_EV_TRACTION_POWER", "path": "Drivetrain", "fmt": { "len": 16, "max": 200, "min": -200, "add": -327.68, "div": 100, "unit": "kilowatts" }, "name": "Traction power"}
   ]},
+{ "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "16F3"}, "freq": 1,
+  "signals": [
+    {"id": "SUB_EV_HVBAT_COOLING_FAN", "path": "Battery.Thermal", "fmt": { "len": 16, "max": 5000, "mul": 10, "unit": "rpm" }, "name": "HV battery cooling fan speed"}
+  ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "106E"}, "freq": 4,
   "signals": [
     {"id": "SUB_EV_UNKNOWN_106E", "path": "Drivetrain", "fmt": { "len": 8, "max": 100, "unit": "unknown" }, "name": "Unknown 106E byte 0"}
   ]},
-{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1024"}, "freq": 4,
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "dbg": true, "cmd": {"22": "1024"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_ACCEL_PEDAL", "path": "Control", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Accelerator pedal position", "suggestedMetric": "throttlePosition"}
+    {"id": "SUB_EV_DEBUG_7B0_1024", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Debug 7B0 1024"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1012"}, "freq": 4,
   "signals": [
@@ -218,11 +222,11 @@
   ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1807"}, "freq": 1,
   "signals": [
-    {"id": "SUB_EV_ESTIMATED_RANGE", "path": "Battery", "fmt": { "len": 16, "max": 500, "div": 100, "unit": "kilometers" }, "name": "Estimated range", "suggestedMetric": "electricRange"}
+    {"id": "SUB_EV_ESTIMATED_RANGE_RAW", "path": "Battery.BMS", "fmt": { "len": 16, "max": 500, "div": 100, "unit": "kilometers" }, "name": "Estimated range"}
   ]},
-{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "10A2"}, "freq": 4,
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "dbg": true, "cmd": {"22": "10A2"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_STEERING_ANGLE", "path": "Suspension", "fmt": { "len": 16, "max": 900, "min": -900, "sign": true, "div": 10, "unit": "degrees" }, "name": "Steering angle"}
+    {"id": "SUB_EV_DEBUG_7B0_10A2", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Debug 7B0 10A2"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1081"}, "freq": 4,
   "signals": [
