@@ -180,6 +180,10 @@
   "signals": [
     {"id": "SUB_EV_HVBAT_COOLING_FAN", "path": "Battery.Thermal", "fmt": { "len": 16, "max": 5000, "mul": 10, "unit": "rpm" }, "name": "HV battery cooling fan speed"}
   ]},
+{ "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "1621"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_PWR_GAUGE_RAW", "path": "Drivetrain", "fmt": { "len": 16, "max": 784, "min": 732, "unit": "scalar" }, "name": "Dashboard power gauge raw"}
+  ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "106E"}, "freq": 4,
   "signals": [
     {"id": "SUB_EV_UNKNOWN_106E", "path": "Drivetrain", "fmt": { "len": 8, "max": 100, "unit": "unknown" }, "name": "Unknown 106E byte 0"}
