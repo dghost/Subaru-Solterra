@@ -172,6 +172,21 @@
   "signals": [
     {"id": "SUB_EV_HVBAT_SOC_RAW", "path": "Battery.BMS", "fmt": { "len": 16, "max": 100, "div": 128, "unit": "percent" }, "name": "HV battery state of charge"}
   ]},
+{ "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "1075"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_WHEEL_SPD_1", "path": "Movement.Wheels", "fmt": {           "len": 16, "max": 250, "min": -250, "add": -327.68, "div": 100, "unit": "kilometersPerHour" }, "name": "Wheel speed 1"},
+    {"id": "SUB_EV_WHEEL_SPD_2", "path": "Movement.Wheels", "fmt": {"bix": 16, "len": 16, "max": 250, "min": -250, "add": -327.68, "div": 100, "unit": "kilometersPerHour" }, "name": "Wheel speed 2"},
+    {"id": "SUB_EV_WHEEL_SPD_3", "path": "Movement.Wheels", "fmt": {"bix": 32, "len": 16, "max": 250, "min": -250, "add": -327.68, "div": 100, "unit": "kilometersPerHour" }, "name": "Wheel speed 3"},
+    {"id": "SUB_EV_WHEEL_SPD_4", "path": "Movement.Wheels", "fmt": {"bix": 48, "len": 16, "max": 250, "min": -250, "add": -327.68, "div": 100, "unit": "kilometersPerHour" }, "name": "Wheel speed 4"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "141E"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_SPEED_HIRES", "path": "Movement", "fmt": { "len": 16, "max": 300, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed high resolution", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "10CF"}, "freq": 1,
+  "signals": [
+    {"id": "SUB_EV_UPTIME", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "seconds" }, "name": "Powertrain uptime counter"}
+  ]},
 { "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "1696"}, "freq": 4,
   "signals": [
     {"id": "SUB_EV_TRACTION_POWER", "path": "Drivetrain", "fmt": { "len": 16, "max": 200, "min": -200, "add": -327.68, "div": 100, "unit": "kilowatts" }, "name": "Traction power"}
@@ -194,15 +209,15 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1012"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_WHEEL_SPEED_1", "path": "Movement.Wheels", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Wheel speed 1"}
+    {"id": "SUB_EV_MOTOR_CURRENT_A", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor current phase A"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1023"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_WHEEL_SPEED_2", "path": "Movement.Wheels", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Wheel speed 2"}
+    {"id": "SUB_EV_MOTOR_CURRENT_B", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor current phase B"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1042"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_WHEEL_SPEED_3", "path": "Movement.Wheels", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Wheel speed 3"}
+    {"id": "SUB_EV_MOTOR_CURRENT_C", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor current phase C"}
   ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1F46"}, "freq": 0.1,
   "signals": [
@@ -234,19 +249,19 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1081"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_YAW_RATE", "path": "Movement", "fmt": { "len": 16, "max": 100, "min": -100, "sign": true, "div": 100, "unit": "scalar" }, "name": "Yaw rate"}
+    {"id": "SUB_EV_MOTOR_TORQUE_A", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor torque A"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1082"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_LATERAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"}
+    {"id": "SUB_EV_MOTOR_TORQUE_B", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor torque B"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1084"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_LONGITUDINAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"}
+    {"id": "SUB_EV_LATERAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1025"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_BRAKE_PEDAL", "path": "Control", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Brake pedal position"}
+    {"id": "SUB_EV_SOAK_TIMER", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Soak timer inverted"}
   ]}
 ],
 "signalGroups": [
