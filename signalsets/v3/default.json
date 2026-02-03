@@ -209,15 +209,15 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1012"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_MOTOR_CURRENT_A", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor current phase A"}
+    {"id": "SUB_EV_SPEED_7B0", "path": "Movement", "fmt": { "len": 16, "max": 200, "div": 10, "unit": "kilometersPerHour" }, "name": "Vehicle speed chassis", "suggestedMetric": "speed"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1023"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_MOTOR_CURRENT_B", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor current phase B"}
+    {"id": "SUB_EV_SPEED_7B0_1023", "path": "Movement", "fmt": { "len": 16, "max": 200, "div": 10, "unit": "kilometersPerHour" }, "name": "Vehicle speed chassis 2"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1042"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_MOTOR_CURRENT_C", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor current phase C"}
+    {"id": "SUB_EV_SPEED_7B0_1042", "path": "Movement", "fmt": { "len": 16, "max": 200, "div": 10, "unit": "kilometersPerHour" }, "name": "Vehicle speed chassis 3"}
   ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1F46"}, "freq": 0.1,
   "signals": [
@@ -249,11 +249,15 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1081"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_MOTOR_TORQUE_A", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor torque A"}
+    {"id": "SUB_EV_YAW_RATE_2", "path": "Movement", "fmt": { "len": 16, "max": 100, "min": -100, "sign": true, "unit": "scalar" }, "name": "Yaw rate secondary"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1082"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_MOTOR_TORQUE_B", "path": "Drivetrain.Motor", "fmt": { "len": 16, "max": 5000, "min": -5000, "sign": true, "unit": "scalar" }, "name": "Motor torque B"}
+    {"id": "SUB_EV_YAW_RATE", "path": "Movement", "fmt": { "len": 16, "max": 100, "min": -100, "sign": true, "unit": "scalar" }, "name": "Yaw rate"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1083"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_LONGITUDINAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1084"}, "freq": 4,
   "signals": [
