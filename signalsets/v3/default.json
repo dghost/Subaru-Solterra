@@ -189,7 +189,7 @@
   ]},
 { "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "1696"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_TRACTION_POWER", "path": "Drivetrain", "fmt": { "len": 16, "max": 200, "min": -200, "add": -327.68, "div": 100, "unit": "kilowatts" }, "name": "Traction power"}
+    {"id": "SUB_EV_HV_CURRENT", "path": "Battery", "fmt": { "len": 16, "max": 300, "min": -300, "add": -327.68, "div": 100, "unit": "amps" }, "name": "HV battery current"}
   ]},
 { "hdr": "745", "rax": "74D", "fcm1": true, "cmd": {"22": "16F3"}, "freq": 1,
   "signals": [
@@ -257,11 +257,11 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1083"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_LONGITUDINAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"}
+    {"id": "SUB_EV_LATERAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1084"}, "freq": 4,
   "signals": [
-    {"id": "SUB_EV_LATERAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"}
+    {"id": "SUB_EV_LONGITUDINAL_ACCEL", "path": "Movement", "fmt": { "len": 16, "max": 20, "min": -20, "sign": true, "div": 100, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1025"}, "freq": 4,
   "signals": [
