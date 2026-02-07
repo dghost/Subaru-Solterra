@@ -266,6 +266,14 @@
 { "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1025"}, "freq": 4,
   "signals": [
     {"id": "SUB_EV_SOAK_TIMER", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Soak timer inverted"}
+  ]},
+{ "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1840"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_FRONT_MOTOR_CURRENT", "path": "Drivetrain.FrontMotor", "fmt": { "len": 16, "max": 500, "min": -300, "add": -3276.8, "div": 10, "unit": "amps" }, "name": "Front motor current"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "fcm1": true, "cmd": {"22": "181D"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_REAR_MOTOR_CURRENT", "path": "Drivetrain.RearMotor", "fmt": { "len": 16, "max": 327, "min": -327, "add": -327.68, "div": 100, "unit": "amps" }, "name": "Rear motor current"}
   ]}
 ],
 "signalGroups": [
