@@ -203,6 +203,13 @@
   "signals": [
     {"id": "SUB_EV_SPEED_7B0", "path": "Movement", "fmt": { "len": 16, "max": 200, "div": 10, "unit": "kilometersPerHour" }, "name": "Vehicle speed chassis", "suggestedMetric": "speed"}
   ]},
+{ "hdr": "7B0", "rax": "7B8", "fcm1": true, "cmd": {"22": "1002"}, "freq": 4,
+  "signals": [
+    {"id": "SUB_EV_WHEEL_SPD_FR", "path": "Movement.Wheels", "fmt": {           "len": 16, "max": 250, "div": 10, "unit": "kilometersPerHour" }, "name": "Front right wheel speed", "suggestedMetric": "frontRightWheelSpeed"},
+    {"id": "SUB_EV_WHEEL_SPD_FL", "path": "Movement.Wheels", "fmt": {"bix": 16, "len": 16, "max": 250, "div": 10, "unit": "kilometersPerHour" }, "name": "Front left wheel speed",  "suggestedMetric": "frontLeftWheelSpeed"},
+    {"id": "SUB_EV_WHEEL_SPD_RR", "path": "Movement.Wheels", "fmt": {"bix": 32, "len": 16, "max": 250, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed",  "suggestedMetric": "rearRightWheelSpeed"},
+    {"id": "SUB_EV_WHEEL_SPD_RL", "path": "Movement.Wheels", "fmt": {"bix": 48, "len": 16, "max": 250, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed",   "suggestedMetric": "rearLeftWheelSpeed"}
+  ]},
 { "hdr": "747", "rax": "74F", "fcm1": true, "cmd": {"22": "1F46"}, "freq": 0.1,
   "signals": [
     {"id": "SUB_EV_AMBIENT_TEMP", "path": "Climate", "fmt": { "len": 8, "min": -40, "max": 60, "add": -40, "unit": "celsius" }, "name": "Ambient temperature"}
